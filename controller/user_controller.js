@@ -14,6 +14,8 @@ exports.createUser = (req, res) => {
                 message: err.message
             })
         }
+        
+        // testing of commit
         bcrypt.hash(password, salt, (err1, hash) => {
             if (err1) return res.status(500).json({
                 status: 0,
